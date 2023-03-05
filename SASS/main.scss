@@ -1,11 +1,15 @@
 :root {
     --primary-color: #edf2fc;
     --secondary-color: #212121;
+    --box-shodaw: 0px 3px 2px rgba(0, 0, 0, 0.1);
+    --box-shodaw2: 0px 0px 2px rgba(0, 0, 0, 0.15);
 }
 
 .dark-theme {
     --primary-color: #212121;
     --secondary-color: #fff;
+    --box-shodaw: 0px 3px 2px rgb(241, 237, 237);
+    --box-shodaw2: 0px 0px 2px rgba(254, 254, 254, 0.15);
 }
 
 #icon {
@@ -17,44 +21,184 @@ body {
     background-color: var(--primary-color);
 }
 
+// header section start 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 11px;
-
-    &__form {
+    &__top {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 11px;
 
-        &__search {
-            height: 48px;
-            padding-left: 48px;
-            padding-right: 48px;
-            background-color: inherit;
-            border: #edf2fc;
-            border: 1px var(--secondary-color);
-            border-radius: 30px;
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 15px;
-            color: var(--secondary-color)
+        &__form {
+            display: flex;
+
+            &__logo {
+                position: fixed;
+                margin-top: 14px;
+                margin-left: 16px;
+            }
+
+            &__search {
+                width: 670px;
+                height: 48px;
+                padding-left: 48px;
+                padding-right: 48px;
+                background-color: inherit;
+                border: #edf2fc;
+                border: 1px var(--secondary-color);
+                border-radius: 30px;
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 15px;
+                color: var(--secondary-color)
+            }
+        }
+
+        &__item {
+            display: flex;
+            gap: 19px;
+
+            &__btn {
+                height: 40px;
+                background: #0D75FF;
+                border-radius: 4px;
+                padding-left: 23px;
+                padding-right: 23px;
+                color: #fff;
+            }
         }
     }
 
-    &__item {
+    &__bottom {
+        padding-top: 20px;
+        padding-bottom: 20px;
         display: flex;
-        gap: 19px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 11px;
+        border: none;
+        // border-top: 1px solid var(--secondary-color);
+        // border-bottom: 1px solid var(--secondary-color);
+        box-shadow: var(--box-shodaw2);
 
-        &__btn {
-            height: 40px;
-            background: #0D75FF;
-            border-radius: 4px;
-            padding-left: 23px;
-            padding-right: 23px;
+        &__text {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: var(--secondary-color);
+            margin-left: 250px;
+            margin-bottom: 0px;
         }
-        
-        
+
+        &__item {
+            display: flex;
+            align-items: center;
+            padding-right: 13px;
+            background: #A6B0C3;
+            border-radius: 4px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 13px;
+
+            &__img {
+                margin-right: 5px;
+            }
+
+            &__text {
+                margin-top: 0px;
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+
+// header section end 
+
+
+// about section start 
+.about {
+    display: flex;
+    margin-top: 2px;
+
+    &__left {
+        padding-right: 25px;
+        padding-left: 5px;
+        width: 268px;
+        box-shadow: var(--box-shodaw);
+
+        &__top {
+            margin-bottom: 25px;
+
+            &__theme {
+                margin-top: 25px;
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                color: var(--secondary-color);
+            }
+
+            &__text {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 155.6%;
+                color: va;
+            }
+        }
+
+        &__item {
+            &__list {
+                display: flex;
+                text-align: center;
+
+                &_about {
+                    margin-right: 42px;
+                    &_theme {
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: var(--secondary-color);
+                        padding-bottom: 0px;
+                        margin-bottom: 0px;
+                        text-align: start;
+                    }
+
+                    &_text {
+                        font-family: 'Noto Sans';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 18px;
+                        color: #757881;
+                        margin-bottom: 0px;
+                        padding-bottom: 0px;
+                    }
+                }
+                &__right{
+                    display: flex;
+                    gap: 8px;
+                    &__img1{
+                        width: 24px;
+                    }
+                    &__img2{
+                        width: 24px;
+                    }
+                }
+            }
+        }
     }
 }

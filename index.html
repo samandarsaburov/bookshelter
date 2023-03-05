@@ -11,26 +11,72 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- icon link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- home css  -->
-    <link rel="stylesheet" href="./style/css/main.css">
+
     <!-- global css  -->
     <link rel="stylesheet" href="./style/css/global.css">
+    <!-- home css  -->
+    <link rel="stylesheet" href="./style/css/main.css">
 </head>
 
 <body>
+
+    <!-- header nav stat -->
     <div class="container">
         <header>
             <nav class="header">
-                <img class="header-logo"  src="./images/home-logo.svg">
-                <form class="header__form">
-                    <input class="header__form__search border-2 border-bottom border-top border-start border-end border-danger-subtle border-2" type="search" placeholder="Search books">
-                </form>
-                <div class="header__item">
-                    <img class="header__item__img" src="./images/home-dark.svg" id="icon">
-                    <button class="header__item__btn">Logout</button>
+                <div class="header__top">
+                    <img class="header-logo" src="./images/home-logo.svg">
+                    <form class="header__top__form">
+                        <img class="header__top__form__logo" src="./images/home-search.svg" alt="">
+                        <input
+                            class="header__top__form__search border-2 border-bottom border-top border-start border-end border-danger-subtle border-2 "
+                            type="search" placeholder="Search books">
+                    </form>
+                    <div class="header__top__item">
+                        <img class="header__top__item__img" src="./images/home-dark.svg" id="icon">
+                        <button class="header__top__item__btn btn btn-outline-secondary">Logout</button>
+                    </div>
+                </div>
+                <div class="header__bottom ">
+                    <p class="header__bottom__text">Showing 18 Result(s)</p>
+                    <div class="header__bottom__item">
+                        <img class="header__bottom__item__img" src="./images/home-cotalog.svg">
+                        <p class="header__bottom__item__text m-0">Order by newest</p>
+                    </div>
                 </div>
             </nav>
         </header>
+        <!-- header nav end  -->
+        <section>
+            <div class="about">
+                <div class="about__left">
+                    <div class="about__left__top">
+                        <h3 class="about__left__top__theme"><b>Bookmarks</b></h3>
+                        <p class="about__left__top__text">
+                            If you don’t like to read, you haven’t found the right book
+                        </p>
+                    </div>
+
+                    <ul class="about__left__item">
+                        <li class="about__left__item__list">
+                            <div class="about__left__item__list_about">
+                                <h4 class="about__left__item__list_about_theme">Python</h4>
+                                <p class="about__left__item__list_about_text">David M. Beazley</p>
+                            </div>
+                            <div class="about__left__item__list__right">
+                                <img class="about__left__item__list__right__img1" src="./images/about-link.svg" alt="">
+                                <img class="about__left__item__list__right__img2" src="./images/about-delete.svg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="about__right">
+
+                </div>
+            </div>
+        </section>
+        <!-- about section start  -->
     </div>
     <script src="./js/main.js"></script>
 </body>
