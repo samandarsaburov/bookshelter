@@ -14,26 +14,29 @@
     <!-- login CSS  -->
     <link rel="stylesheet" href="./style/css/login.css">
     <!-- global css  -->
+    <link rel="stylesheet" href="./style/css/global.css">
    
 </head>
 
 <body>
     <div class="login login__img">
         <div class="login__item">
-            <img class="login__item__img" src="./images/login icon.png" alt="logo">
+            <img class="login__item__img" src="./images/login-icon.png" alt="logo">
 
-            <form class="login__item__form d-flex flex-column">
+            <form id="loginForm" class="login__item__form d-flex flex-column">
 
                 <img class="login__item__form__img1" src="./images/login-user.svg" alt="logo">
-                <input class="login__item__form__username" type="text" placeholder="Username">
+                <input id="loginUser" class="login__item__form__username" type="email" placeholder="Username">
 
                 <img class="login__item__form__img2" src="./images/login-password.svg" alt="">
-                <input class="login__item__form__password" type="password" placeholder="password">
+                <input id="loginPassword" class="login__item__form__password" type="password" placeholder="password">
 
-                <button class="login__item__form__btn">login</button>
+                <button  class="login__item__form__btn">Login</button>
             </form>
         </div>
     </div>
+
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

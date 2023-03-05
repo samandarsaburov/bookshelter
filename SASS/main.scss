@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+.dark-theme {
+    --primary-color: #212121;
+    --secondary-color: #fff;
+}
+
+#icon {
+    width: 25px;
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 11px;
+
+    &__form {
+        display: flex;
+
+        &__search {
+            height: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            background-color: inherit;
+            border: #edf2fc;
+            border: 1px var(--secondary-color);
+            border-radius: 30px;
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: var(--secondary-color)
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 19px;
+
+        &__btn {
+            height: 40px;
+            background: #0D75FF;
+            border-radius: 4px;
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+        
+        
+    }
+}
