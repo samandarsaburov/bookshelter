@@ -3,6 +3,8 @@
     --secondary-color: #212121;
     --box-shodaw: 0px 3px 2px rgba(0, 0, 0, 0.1);
     --box-shodaw2: 0px 0px 2px rgba(0, 0, 0, 0.15);
+    --bacround-item: #F8FAFD;
+    --bodycolor:#E5E5E5;
 }
 
 .dark-theme {
@@ -10,6 +12,8 @@
     --secondary-color: #fff;
     --box-shodaw: 0px 3px 2px rgb(241, 237, 237);
     --box-shodaw2: 0px 0px 2px rgba(254, 254, 254, 0.15);
+    --bacround-item: #787878;
+    --bodycolor:#212121;
 }
 
 #icon {
@@ -18,7 +22,7 @@
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color:var(--bodycolor) ;
 }
 
 // header section start 
@@ -33,7 +37,7 @@ body {
             display: flex;
 
             &__logo {
-                position: fixed;
+                position: absolute;
                 margin-top: 14px;
                 margin-left: 16px;
             }
@@ -66,14 +70,14 @@ body {
                 border-radius: 4px;
                 padding-left: 23px;
                 padding-right: 23px;
-                color: #fff;
+                color: rgb(238, 228, 228);
             }
         }
     }
 
     &__bottom {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 11px;
+        padding-bottom: 11px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -154,15 +158,23 @@ body {
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 155.6%;
-                color: va;
+                color: var(--secondary-color);
             }
         }
 
         &__item {
+            padding-left: 0px;
+            margin-left: 25px;
             &__list {
+                margin-left: 0px;
                 display: flex;
                 text-align: center;
-
+                background: var(--bacround-item);
+                padding-left: 10px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border-radius: 4px;
+                
                 &_about {
                     margin-right: 42px;
                     &_theme {
@@ -183,7 +195,7 @@ body {
                         font-weight: 500;
                         font-size: 13px;
                         line-height: 18px;
-                        color: #757881;
+                        color: var(--secondary-color);
                         margin-bottom: 0px;
                         padding-bottom: 0px;
                     }
@@ -200,5 +212,10 @@ body {
                 }
             }
         }
+    }
+    &__right{
+        margin: 40px;
+        height: 431px;
+        
     }
 }

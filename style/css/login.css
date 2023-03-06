@@ -70,6 +70,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #0D75FF;
+  padding-top: 13px;
 }
 .login__item__form__btn:hover {
   background-color: #0D75FF;

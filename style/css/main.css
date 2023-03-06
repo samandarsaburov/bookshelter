@@ -3,6 +3,8 @@
   --secondary-color: #212121;
   --box-shodaw: 0px 3px 2px rgba(0, 0, 0, 0.1);
   --box-shodaw2: 0px 0px 2px rgba(0, 0, 0, 0.15);
+  --bacround-item: #F8FAFD;
+  --bodycolor:#E5E5E5;
 }
 
 .dark-theme {
@@ -10,6 +12,8 @@
   --secondary-color: #fff;
   --box-shodaw: 0px 3px 2px rgb(241, 237, 237);
   --box-shodaw2: 0px 0px 2px rgba(254, 254, 254, 0.15);
+  --bacround-item: #787878;
+  --bodycolor:#212121;
 }
 
 #icon {
@@ -18,7 +22,7 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--bodycolor);
 }
 
 .header__top {
@@ -31,7 +35,7 @@ body {
   display: flex;
 }
 .header__top__form__logo {
-  position: fixed;
+  position: absolute;
   margin-top: 14px;
   margin-left: 16px;
 }
@@ -61,11 +65,11 @@ body {
   border-radius: 4px;
   padding-left: 23px;
   padding-right: 23px;
-  color: #fff;
+  color: rgb(238, 228, 228);
 }
 .header__bottom {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,11 +138,21 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 155.6%;
-  color: va;
+  color: var(--secondary-color);
+}
+.about__left__item {
+  padding-left: 0px;
+  margin-left: 25px;
 }
 .about__left__item__list {
+  margin-left: 0px;
   display: flex;
   text-align: center;
+  background: var(--bacround-item);
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 4px;
 }
 .about__left__item__list_about {
   margin-right: 42px;
@@ -160,7 +174,7 @@ body {
   font-weight: 500;
   font-size: 13px;
   line-height: 18px;
-  color: #757881;
+  color: var(--secondary-color);
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
@@ -173,4 +187,8 @@ body {
 }
 .about__left__item__list__right__img2 {
   width: 24px;
+}
+.about__right {
+  margin: 40px;
+  height: 431px;
 }/*# sourceMappingURL=main.css.map */
