@@ -131,6 +131,31 @@ body {
 
 //------- header section end -----
 
+  /* scrol  */
+
+  .scroltop{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 75px;
+    height: 60px;
+    border-radius: 50px;
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .scroltop.active{
+    visibility: visible;
+    opacity: 1000;
+  }
+
+  /* scrol end  */
 
 // ------about section start --------
 .about {
@@ -311,6 +336,9 @@ body {
                         padding-top: 10px;
                         padding-bottom: 10px;
                         padding-right: 26px;
+                        &:hover{
+                            background-color: #0D75FF;
+                        }
                     }
 
                     &__modal {
@@ -326,6 +354,10 @@ body {
                         padding-top: 10px;
                         padding-bottom: 10px;
                         padding-right: 28px;
+                        &:hover{
+                            background-color: #0D75FF;
+                            color: #000000;
+                        }
                     }
                 }
 
