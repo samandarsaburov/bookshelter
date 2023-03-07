@@ -60,6 +60,7 @@ icon.onclick = function () {
 // })
 
 let listItem = document.querySelector("#products__top")
+let bookItem = document.querySelector("#listItem")
 
 
 async function getData() {
@@ -75,6 +76,7 @@ function renderData(data) {
     listItem.innerHTML = ""
 
     data.items.forEach((item) => {
+        // console.log(item);
         listItem.innerHTML += `
         <li class="about__product__item__list flex-column">
         <div class="about__product__item__list__img">
@@ -86,7 +88,7 @@ function renderData(data) {
             <p class="about__product__item__list__theme__year" id="year">${item.volumeInfo.publishedDate}</p>
         </div>
         <div class="about__product__item__list__bottom">
-            <button onclick="saveBook(${item.id})" class="about__product__item__list__bottom__storage" >Bookmark</button>
+            <button onclick="saveBook(${item.volumeInfo.pageCount})" class="about__product__item__list__bottom__storage">Bookmark</button>
             <button class="about__product__item__list__bottom__modal" href="#">More Info</button>
         </div>
         <a class="about__product__item__list__btn" href="#">Read</a>
@@ -96,10 +98,45 @@ function renderData(data) {
 
 
 }
+let arr = []
+let itemId = []
+function saveBook(id) {
+    if(itemId.includes(id)){
+        return
+    }
+    else{
+        itemId.push(id)
+        getData().then(item => {
+            let dataItem = item.items.find(el => el.volumeInfo.pageCount === id)
+            arr.push(dataItem)
+            renderItem(arr)
+        })
+    }
 
-function saveBook(id){
-    console.log(id);
-    // let itemBook = bookData.filter((item) => {return item.id == id})
-    // console.log(itemBook);
+}
+
+function renderItem(data) {
+    bookItem.innerHTML = null
+    data?.forEach(item => {
+        bookItem.innerHTML += `
+        <li class="about__left__item__list">
+        <div class="about__left__item__list_about">
+            <h4 class="about__left__item__list_about_theme">${item.volumeInfo.title}</h4>
+            <p class="about__left__item__list_about_text">${item.volumeInfo.authors}</p>
+        </div>
+        <div class="about__left__item__list__right">
+            <img class="about__left__item__list__right__img1" src="./images/about-link.svg" alt="">
+            <img onclick="deleteItem(${item.volumeInfo.pageCount})" class="about__left__item__list__right__img2" src="./images/about-delete.svg"
+                alt="">
+        </div>
+    </li>
+        `
+    })
+}
+
+function deleteItem(id){
+    arr = arr.filter(item => item.volumeInfo.pageCount !== id)
+    itemId = itemId.filter(el => el !== id)
+    renderItem(arr)
 }
 getData()
