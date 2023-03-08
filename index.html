@@ -9,6 +9,8 @@
     <!-- bootstrap link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- icon link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- global css  -->
@@ -20,9 +22,8 @@
 </head>
 
 <body>
-
     <!-- header nav stat -->
-    <div class="container p-3">
+    <div class="container p-3 position-relative">
         <header>
             <nav class="header">
                 <div class="header__top">
@@ -30,6 +31,7 @@
                     <form class="header__top__form">
                         <img class="header__top__form__logo" src="./images/home-search.svg" alt="">
                         <input
+                        id="searchInp"
                             class="header__top__form__search border-2 border-bottom border-top border-start border-end border-danger-subtle border-2 "
                             type="search" placeholder="Search books">
                     </form>
@@ -50,14 +52,76 @@
         </header>
         <!-- header nav end  -->
 
+
+
+        <!-- about section start  -->
+
         <section>
-            <!-- scroll  -->
+
+            <!-- Example Code -->
+
+            <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button> -->
+
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body pt-0" id="modalBookItem">
+
+                    <!-- <div class="modal__theme">
+                        <h1 class="modal__teme__text">Python</h1>
+                    </div>
+                    <div class="modal__img"><img class="modal__img__src" src="./images/1111111.png" alt=""></div>
+                    <p class="modal__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit nulla quae
+                        hic illo qui quaerat animi, ab iusto ducimus id aut obcaecati accusantium, dolor voluptatem
+                        adipisci ut magnam vel. Placeat molestiae exercitationem dolor libero nesciunt! Saepe rem porro
+                        veritatis beatae. Sunt, deserunt exercitationem voluptatibus praesentium aspernatur excepturi
+                        quae aperiam? Repellendus.</p>
+
+                    <ul class="modal__list flex-column">
+                        <li class="modal__list__item">
+                            <p class="modal__list__item__Autor">Author : </p>
+                            <p class="modal__list__item__name">Jamal Kasper</p>
+                        </li>
+                        <li class="modal__list__item">
+                            <p class="modal__list__item__Autor">Published : </p>
+                            <p class="modal__list__item__name">2019</p>
+                        </li>
+
+                        <li class="modal__list__item">
+                            <p class="modal__list__item__Autor">Publishers :</p>
+                            <p class="modal__list__item__name">Hollman</p>
+                        </li>
+
+
+                        <li class="modal__list__item">
+                            <p class="modal__list__item__Autor">Categories:</p>
+                            <p class="modal__list__item__name">Computers</p>
+                        </li>
+
+                        <li class="modal__list__item">
+                            <p class="modal__list__item__Autor">Pages Count:</p>
+                            <p class="modal__list__item__name">346</p>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+
+            <!-- End Example Code end -->
+
+            <!-- scroll star -->
 
             <div class="scroltop" onclick="scrollToTop()">
                 <img src="./images/scroll.svg" alt="">
             </div>
 
+            <!-- scroll end -->
+
             <!-- Slider main container -->
+
             <div class="swiper mb-2 mt-4 border-3 rounded-3">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
@@ -106,31 +170,7 @@
                                 <p class="about__left__item__list_about_text">David M. Beazley</p>
                             </div>
                             <div class="about__left__item__list__right">
-                                <img class="about__left__item__list__right__img1" src="./images/about-link.svg" alt="">
-                                <img class="about__left__item__list__right__img2" src="./images/about-delete.svg"
-                                    alt="">
-                            </div>
-                        </li>
-
-                        <li class="about__left__item__list">
-                            <div class="about__left__item__list_about">
-                                <h4 class="about__left__item__list_about_theme">Python</h4>
-                                <p class="about__left__item__list_about_text">David M. Beazley</p>
-                            </div>
-                            <div class="about__left__item__list__right">
-                                <img class="about__left__item__list__right__img1" src="./images/about-link.svg" alt="">
-                                <img class="about__left__item__list__right__img2" src="./images/about-delete.svg"
-                                    alt="">
-                            </div>
-                        </li>
-
-                        <li class="about__left__item__list">
-                            <div class="about__left__item__list_about">
-                                <h4 class="about__left__item__list_about_theme">Python</h4>
-                                <p class="about__left__item__list_about_text">David M. Beazley</p>
-                            </div>
-                            <div class="about__left__item__list__right">
-                                <img class="about__left__item__list__right__img1" src="./images/about-link.svg" alt="">
+                                <a class="about__left__item__list__right__link" href="https://kitoblardunyosi.uz/"><img class="about__left__item__list__right__link__img1" src="./images/about-link.svg" alt=""></a>
                                 <img class="about__left__item__list__right__img2" src="./images/about-delete.svg"
                                     alt="">
                             </div>
@@ -160,12 +200,15 @@
             </div>
         </section>
     </div>
-
+    <!-- bootstrap link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- swipper js  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js"></script>
     <!-- main js start link  -->
     <script src="./js/main.js"></script>
     <!-- swipper js  -->
     <script type="module" src="./js/swipper.js"></script>
+
 
 </body>
 

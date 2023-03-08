@@ -164,6 +164,7 @@ body {
   color: var(--secondary-color);
 }
 .about__left__top__text {
+  width: 218px;
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
@@ -173,7 +174,7 @@ body {
 }
 .about__left__item {
   padding-left: 0px;
-  margin-left: 25px;
+  margin-left: 5px;
   display: flex;
   gap: 15px;
 }
@@ -182,14 +183,15 @@ body {
   display: flex;
   text-align: center;
   background: var(--bacround-item);
-  padding-left: 10px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 8px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   border-radius: 4px;
   width: 218px;
+  justify-content: space-between;
 }
 .about__left__item__list_about {
-  margin-right: 42px;
+  margin-right: 5px;
 }
 .about__left__item__list_about_theme {
   font-family: "Rubik";
@@ -211,12 +213,16 @@ body {
   color: var(--secondary-color);
   margin-bottom: 0px;
   padding-bottom: 0px;
+  padding-right: 0px;
+  text-align: start;
 }
 .about__left__item__list__right {
   display: flex;
   gap: 8px;
+  padding-right: 8px;
+  align-items: center;
 }
-.about__left__item__list__right__img1 {
+.about__left__item__list__right__link__img1 {
   width: 24px;
 }
 .about__left__item__list__right__img2 {
@@ -333,4 +339,78 @@ body {
   padding-top: 10px;
   text-align: center;
   padding-bottom: 10px;
+}
+.about__product__item__list__btn:hover {
+  background: #91abba;
+}
+
+.modal__theme {
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  background: #F8FAFD;
+}
+.modal__theme__text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #222531;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.modal__img {
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.modal__img__src {
+  height: 299.59px;
+}
+
+.modal__text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 170.3%;
+  color: #58667E;
+  margin-left: 46px;
+  margin-top: 40px;
+}
+
+.modal__list {
+  display: flex;
+  gap: 17px;
+  padding-left: 46px;
+}
+.modal__list__item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.modal__list__item__Autor {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  color: #222531;
+}
+.modal__list__item__name {
+  padding-left: 25px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #0D75FF;
+  background: rgba(13, 117, 255, 0.09);
+  border-radius: 30px;
 }/*# sourceMappingURL=main.css.map */
