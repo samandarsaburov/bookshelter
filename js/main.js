@@ -124,12 +124,12 @@ function modalBook(id) {
         
             <li class="modal__list__item">
                 <p class="modal__list__item__Autor">Categories:</p>
-                <p class="modal__list__item__name">Computers</p>
+                <p class="modal__list__item__name">${dataItem.volumeInfo.categories}</p>
             </li>
         
             <li class="modal__list__item">
                 <p class="modal__list__item__Autor">Pages Count:</p>
-                <p class="modal__list__item__name">346</p>
+                <p class="modal__list__item__name">${dataItem.volumeInfo.pageCount}</p>
             </li>
         </ul>`
     })

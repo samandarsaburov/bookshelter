@@ -19,7 +19,7 @@ formBtn.addEventListener("click", async function () {
             body: JSON.stringify({ "email": userInp.value, "password": passwordInp.value })
         })
     if (postLogin.status === 200) {
-        formBtn.setAttribute("href", "./index.html")
+        formBtn.setAttribute("href", "./home.html")
     }
     console.log(postLogin.status);
 
